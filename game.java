@@ -6,15 +6,27 @@ class game
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     boolean flag = true;
-    
-    System.out.println("Guess 1 or 0");
+    int c = 0;
+   
     while (flag) {
-      System.out.println("Guess?");
+      System.out.println("Guess? (0 or 1)");
+      
       int answer = scanner.nextInt();
       int comp = (int) (Math.random() * 2) / 1;
-      System.out.println(comp);
-      if (answer != comp)
-        flag = false;
+     
+      if (answer == 0 || answer == 1)
+      {
+        if (answer == comp)
+        {
+          c++;
+          System.out.println("Points: " + c);
+        }
+        else
+        {
+          System.out.println("GAME OVER");
+          flag = false;
+        }
+      }
     }
-  }
+  } 
 }
