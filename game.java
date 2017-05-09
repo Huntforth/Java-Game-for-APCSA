@@ -23,10 +23,10 @@ class game
         }
         else
         {
-          System.out.println("GAME OVER");
           flag = false;
         }
       }
     }
+    System.out.println("GAME OVER/nPoints: " + c);
   } 
 }
